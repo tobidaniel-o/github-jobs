@@ -27,7 +27,7 @@ export default function DisplayJobs({ allJobs }) {
               <a
                 className="btn"
                 href={job.applyUrl}
-                // target="_blank"
+                target="_blank"
                 rel="noreferrer"
               >
                 Apply
@@ -35,7 +35,7 @@ export default function DisplayJobs({ allJobs }) {
               <a
                 className="btn"
                 href={job.hostedUrl}
-                // target="_blank"
+                target="_blank"
                 rel="noreferrer"
               >
                 About

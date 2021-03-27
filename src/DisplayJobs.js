@@ -24,10 +24,20 @@ export default function DisplayJobs({ allJobs }) {
             </p>
             <p className="location">{location}</p>
             <div className="buttons">
-              <a className="btn" href={job.applyUrl} target="_blank">
+              <a
+                className="btn"
+                href={job.applyUrl}
+                // target="_blank"
+                rel="noreferrer"
+              >
                 Apply
               </a>
-              <a className="btn" href={job.hostedUrl} target="_blank">
+              <a
+                className="btn"
+                href={job.hostedUrl}
+                // target="_blank"
+                rel="noreferrer"
+              >
                 About
               </a>
             </div>

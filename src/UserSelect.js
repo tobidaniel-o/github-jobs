@@ -21,7 +21,7 @@ export default function UserSelect({ filterJobs }) {
             onChange={handleUserChoice}
           >
             <option value="placeholder" disabled>
-              Filter by title...
+              Filter by department...
             </option>
             <option value="Engineering">Engineering</option>
             <option value="Sales">Sales</option>

@@ -350,9 +350,10 @@ h1 {
 
 select {
   width: 100%;
-  padding: 8px 9px;
+  padding: 13px 13px;
   border-style: none;
   border-radius: 5px;
+  border: 2px solid #eeeeee;
   color: #0d253f;
   outline: none;
   -webkit-appearance: none;
@@ -369,7 +370,7 @@ select {
   font-size: 16px;
   padding: 5px;
   border-radius: 5px;
-  top: 65px;
+  top: 67px;
   right: 25px;
   display: flex;
   justify-content: center;

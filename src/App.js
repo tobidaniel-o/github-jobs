@@ -9,6 +9,7 @@ function App() {
   // 1. Initialize state
   const [jobs, setJobs] = useState([]);
   const [filteredJobs, setFilteredJobs] = useState([]);
+  const [loading, isLoading] = useState(true)
 
   useEffect(() => {
     axios({
@@ -44,7 +45,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1 className="wrapper">GitHubJobs</h1>
+        <h1 className="wrapper">joBFinder</h1>
       </header>
 
       <UserSelect filterJobs={getJobs} />
@@ -56,7 +57,7 @@ function App() {
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

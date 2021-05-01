@@ -329,9 +329,14 @@ header {
   height: 10vh;
 }
 
+div.header {
+  position: sticky;
+  top: 74px;
+}
+
 h1 {
-  padding-top: 30px;
-  font-size: 2rem;
+  padding-top: 20px;
+  font-size: 1.2rem;
   font-weight: 700;
 }
 
@@ -346,18 +351,15 @@ h1 {
 select {
   width: 100%;
   padding: 8px 9px;
-  border: 2px solid #01b4e4;
-  border-radius: 0;
+  border-style: none;
+  border-radius: 5px;
   color: #0d253f;
   outline: none;
   -webkit-appearance: none;
-  margin-top: 10px;
+  margin-top: -15px;
   font-size: 0.9rem;
   font-weight: 700;
   position: relative;
-}
-
-.searchContainer {
 }
 
 .search {
@@ -367,10 +369,11 @@ select {
   font-size: 16px;
   padding: 5px;
   border-radius: 5px;
-  top: 90px;
+  top: 65px;
   right: 25px;
   display: flex;
   justify-content: center;
+  position: fixed;
 }
 
 .cardContainer {

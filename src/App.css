@@ -335,6 +335,14 @@ h1 {
   font-weight: 700;
 }
 
+.darkMode {
+  display: flex;
+}
+
+.loading {
+  text-align: center;
+}
+
 select {
   width: 100%;
   padding: 8px 9px;
@@ -346,6 +354,23 @@ select {
   margin-top: 10px;
   font-size: 0.9rem;
   font-weight: 700;
+  position: relative;
+}
+
+.searchContainer {
+}
+
+.search {
+  background-color: #5964e0;
+  position: absolute;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 5px;
+  top: 90px;
+  right: 25px;
+  display: flex;
+  justify-content: center;
 }
 
 .cardContainer {

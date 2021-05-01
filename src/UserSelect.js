@@ -1,12 +1,7 @@
-// get user's selection
-// somehow pass it to App.js
-// use it to filter the jobs array
-
 import { useState } from "react";
+import { FaSearch } from "react-icons/fa";
 
 export default function UserSelect({ filterJobs }) {
-  // Initiate state to hold user's chosen value from dropdown
-
   const [userChoice, setUserChoice] = useState("placeholder");
 
   // Gets user's department value from the dropdown
@@ -26,7 +21,7 @@ export default function UserSelect({ filterJobs }) {
             onChange={handleUserChoice}
           >
             <option value="placeholder" disabled>
-              Filter by department...
+              Filter by title...
             </option>
             <option value="Engineering">Engineering</option>
             <option value="Sales">Sales</option>
@@ -37,6 +32,9 @@ export default function UserSelect({ filterJobs }) {
             <option value="Legal">Legal</option>
             <option value="Customer Success">Customer Success</option>
           </select>
+          <div className="search">
+            <FaSearch />
+          </div>
         </form>
       </div>
     </div>

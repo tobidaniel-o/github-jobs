@@ -4,14 +4,18 @@ import DisplayJobs from "./DisplayJobs";
 import UserSelect from "./UserSelect.js";
 import Footer from "./Footer";
 import "./App.css";
+import DarkMode from "./DarkMode";
+import Loader from "react-loader-spinner";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 function App() {
   // 1. Initialize state
   const [jobs, setJobs] = useState([]);
   const [filteredJobs, setFilteredJobs] = useState([]);
-  const [loading, isLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    setLoading(true);
     axios({
       method: "GET",
       url: "https://api.lever.co/v0/postings/leverdemo",
@@ -23,9 +27,10 @@ function App() {
         const jobsDataArray = response.data;
         setJobs(jobsDataArray);
         setFilteredJobs(jobsDataArray);
+        setLoading(false);
       })
       .catch((error) => {
-        alert(`Ooops!!! ${error}`);
+        setLoading(false);
       });
   }, []);
 
@@ -45,7 +50,8 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1 className="wrapper">joBFinder</h1>
+        <h1 className="wrapper">jobfinder</h1>
+        <DarkMode />
       </header>
 
       <UserSelect filterJobs={getJobs} />
@@ -53,7 +59,18 @@ function App() {
       <div className="cardContainer">
         <div className="wrapper">
           <div className="classWrapper">
-            <DisplayJobs allJobs={filteredJobs} />
+            {loading ? (
+              <Loader
+                className="loading"
+                type="TailSpin"
+                color="#00BFFF"
+                height={40}
+                width={40}
+                timeout={30000} //3 secs
+              />
+            ) : (
+              <DisplayJobs allJobs={filteredJobs} />
+            )}
           </div>
         </div>
       </div>

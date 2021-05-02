@@ -68,7 +68,7 @@ function App() {
                 color="#00BFFF"
                 height={40}
                 width={40}
-                timeout={30000} //3 secs
+                timeout={30000}
               />
             ) : (
               <DisplayJobs allJobs={filteredJobs} />

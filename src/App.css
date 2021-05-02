@@ -327,6 +327,13 @@ header {
   color: #ffffff;
   height: 10vh;
   background-image: url(./assets/mobile/bg-pattern-header.svg);
+  padding-top: 20px;
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 div.header {
@@ -335,13 +342,15 @@ div.header {
 }
 
 h1 {
-  padding-top: 20px;
+  
   font-size: 1.2rem;
   font-weight: 700;
 }
 
 .darkMode {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .loading {
@@ -385,6 +394,17 @@ select {
 p {
   margin-bottom: 0.6rem;
   font-size: 1rem;
+}
+
+.faSize {
+  font-size: 12px;
+}
+
+.faSun {
+  margin-right: 6px;
+}
+.faMoon {
+  margin-left: 6px;
 }
 
 .card {

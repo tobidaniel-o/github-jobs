@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import DisplayJobs from "./DisplayJobs";
-import UserSelect from "./UserSelect.js";
-import Footer from "./Footer";
+import DisplayJobs from "./components/DisplayJobs";
+import UserSelect from "./components/UserSelect.js";
+import Footer from "./components/Footer";
 import "./App.css";
-import DarkMode from "./DarkMode";
+import DarkMode from "./components/Darkmode";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
@@ -50,8 +50,10 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1 className="wrapper">jobfinder</h1>
-        <DarkMode />
+        <div className="headerContainer wrapper">
+          <h1 >jobfinder</h1>
+          <DarkMode />
+        </div>
       </header>
 
       <UserSelect filterJobs={getJobs} />
